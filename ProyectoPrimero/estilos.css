@@ -1,29 +1,32 @@
-p {
-  text-align: justify;
+body {
+  padding: 2%;
 }
 
-.menu-inicial {
-  text-align: right;
-  font-family: "IBM Plex Mono", monospace;
-  height: 2%;
+.menu-inicial nav ul {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.menu-inicial nav {
-  display: block;
+.menu-inicial nav ul li {
+  list-style-type: none;
 }
 
-.menu-inicial i {
-  color: black;
-}
-
-.menu-inicial a {
+.menu-inicial nav ul li a {
   text-decoration: none;
   color: black;
-  margin: 0 5% 5% 0%;
 }
 
-.menu-inicial label {
-  font-size: 40px;
+.menu-inicial label span {
   display: none;
 }
 
@@ -31,80 +34,85 @@ p {
   display: none;
 }
 
-.section-inicial {
-  padding: 8% 15% 5% 15%;
-}
-
-.section-inicial .titulo {
-  font-size: 1.5rem;
-  font-weight: initial;
+.seccion-inicial .titulo {
   font-family: "IBM Plex Sans", sans-serif;
-  width: 90%;
+  font-size: 20px;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 42px;
+  padding-right: 20%;
 }
 
-.section-inicial .titulo .punto {
-  color: blue;
-}
-
-.section-inicial .titulo .tacha {
+.seccion-inicial .titulo .tacha {
   text-decoration: line-through;
 }
 
-.section-inicial a {
-  background-color: #00F3BB;
-  width: 15.7%;
-  height: 1.4%;
+.seccion-inicial .titulo .punto {
+  color: #0000EC;
 }
 
-.section-inicial .descripcion {
+.seccion-inicial .descripcion-desktop {
   font-family: "IBM Plex Mono", monospace;
-  width: 50%;
+  text-align: justify;
 }
 
-.section-podcast {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0000FF), to(#0000A3));
-  background-image: linear-gradient(#0000FF, #0000A3);
-  color: white;
+.seccion-inicial .descripcion-mobile {
+  font-family: "IBM Plex Mono", monospace;
+  text-align: justify;
+  display: none;
 }
 
-.section-podcast h1 {
-  font-family: "IBM Plex Sans", sans-serif;
-  padding: 8% 15% 0% 15%;
-  font-weight: lighter;
-}
-
-.section-podcast .podcast {
-  width: 90%;
-  margin: 2% 5% 5% 5%;
-}
-
-.section-podcast .podcast iframe {
-  padding: 0% 6% 3% 3%;
-}
-
-@media only screen and (max-width: 420px) {
-  .menu-inicial label {
-    display: block;
-    cursor: pointer;
+@media all and (max-width: 800px) {
+  .menu-inicial nav ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-  .menu-inicial nav {
-    text-align: center;
+}
+
+@media (max-width: 420px) {
+  .menu-inicial nav ul {
     display: none;
   }
-  .menu-inicial a {
+  .menu-inicial #toggle:checked + nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    padding: 0;
+    background-color: #0000EC;
+  }
+  .menu-inicial #toggle:checked + nav ul li {
+    padding: 5% 2% 5% 5%;
+  }
+  .menu-inicial #toggle:checked + nav ul a {
+    text-align: start;
+    display: block;
+    color: white;
+  }
+  .menu-inicial #toggle:checked + label span.hamburguesa {
+    display: none;
+  }
+  .menu-inicial #toggle:checked + label span.cerrar {
     display: block;
   }
-  .menu-inicial #toggle:checked + nav {
-    display: block;
-  }
-  .section-inicial {
+  .menu-inicial label span {
     display: inline-block;
-    margin: 0 auto;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
   }
-  .section-inicial .descripcion {
-    width: 100%;
+  .menu-inicial label span .cerrar {
+    display: none;
+  }
+  .menu-inicial img {
+    margin: 0 auto;
+    text-align: left;
+  }
+  .seccion-inicial .descripcion-mobile {
+    display: block;
+  }
+  .seccion-inicial .descripcion-desktop {
+    display: none;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

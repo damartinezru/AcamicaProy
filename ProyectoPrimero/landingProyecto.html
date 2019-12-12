@@ -8,34 +8,45 @@
     <link href="estilos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|Roboto+Mono&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Proyecto</title>
 </head>
 
 <body>
     <div class="menu-inicial">
-        <label for="toggle"><i class="fas fa-bars"></i></label>
-        <input type="checkbox" id="toggle">
+            <img src="assets/logo.svg">
+            <label for="toggle">
+                <span class="hamburguesa"><i class="fas fa-bars"></i></span>
+                <span class="cerrar"><i class="fas fa-times"></i></span>
+             </label>
+            <input type="checkbox" id="toggle">
         <nav>
-            <a href="#">EPISODIOS</a>
-            <a href="#">NOSOTROS</a>
-            <a href="#">ENTREVISTAS</a>
-            <a href="#">T&OacutePICOS</a>
+            <ul>
+                    <li><a href="#">EPISODIOS</a></li>
+                    <li><a href="#">NOSOTROS</a></li>
+                    <li><a href="#">ENTREVISTAS</a></li>
+                    <li><a href="#">T&OacutePICOS</a></li>
+            </ul>
+
         </nav>
     </div>
-    <div class="section-inicial">
+    <div class="seccion-inicial">
         <div class="titulo">
             <h1>Hello <span class="tacha">world</span> pale blue dot <span class="punto">.</span>
             </h1>
         </div>
-        <div class="descripcion">
+        <div class="descripcion-desktop">
             <p>El portal de podcasts que explora el mundo de la programaci&oacuten y la tecnolog&iacutea.Nuevos
                 episodios,
                 todos los jueves cada 15 d&iacuteas
             </p>
         </div>
+        <div class="descripcion-mobile">
+                <p>Un podcast que explora el mundo de la programac&iacuteon. Nuevos episodios, todos los jueves cada 15 d&iacuteas
+                </p>
+        </div>
         <a>CONOCE M&AacuteS</a>
     </div>
-    <div class="section-podcast">
+    <div class="seccion-podcast">
         <h1>Episodios</h1>
         <div class="podcast">
             <iframe src="https://open.spotify.com/embed-podcast/show/4A3P2hTQlKhDSFxgVg3TbP" width="40%" height="232"

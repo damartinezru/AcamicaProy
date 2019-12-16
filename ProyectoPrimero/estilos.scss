@@ -4,6 +4,7 @@ body {
     padding: $pad;
 
 }
+
 .menu-inicial {
 
     nav ul {
@@ -12,20 +13,31 @@ body {
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
+
         li {
             list-style-type: none;
+
             a {
                 text-decoration: none;
                 color: black;
             }
         }
     }
-    
-    label {
-        span {
+
+    .navbar-check label {
+        display: inline-block;
+
+        span.hamburguesa {
             display: none;
         }
+
+        span.cerrar {
+            display: none;
+
+        }
     }
+
+
     #toggle {
         display: none;
     }
@@ -35,23 +47,27 @@ body {
 
 .seccion-inicial {
     .titulo {
-    font-family: $fuente-uno;
-    font-size: 20px;
-    color: #060A24;
-    letter-spacing: 0;
-    line-height: 42px;
-    padding-right: 20% ;
-    .tacha {
-        text-decoration: line-through;
+        font-family: $fuente-uno;
+        font-size: 20px;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 42px;
+        padding-right: 20%;
+
+        .tacha {
+            text-decoration: line-through;
+        }
+
+        .punto {
+            color: #0000EC;
+        }
     }
-    .punto {
-        color:#0000EC ;
-    }
-    }
+
     .descripcion-desktop {
         font-family: $fuente-dos;
         text-align: justify;
     }
+
     .descripcion-mobile {
         font-family: $fuente-dos;
         text-align: justify;
@@ -62,56 +78,103 @@ body {
 @media all and (max-width: 800px) {
     .menu-inicial {
         nav ul {
-        justify-content: space-around;
+            justify-content: space-around;
         }
     }
 }
+
 @media (max-width: 420px) {
     .menu-inicial {
-        nav ul {
-            display: none;
-        }
-
         
-         #toggle:checked +  nav ul {
-            display: flex;
-            flex-flow: column wrap;
-            padding: 0;
-            background-color: #0000EC;
-             li {
-                padding: 5% 2% 5% 5%;
 
-             }
-            a{
-                text-align: start;
-                display: block;
-                color:white;
+        #toggle:not(:checked)+div.navbar {
+            display: flex;
+            border: 1px solid black;
+            width: 100%;
+            .navbar-imagen {
+                width: 50%;
             }
 
-        }
-        #toggle:checked + label span.hamburguesa {
-            display: none;
-        }
-        #toggle:checked + label span.cerrar {
-            display: block;
-        }
-
-        label {
-            span {
-                display: inline-block;
-
-                .hamburguesa{
+            .navbar-label {
+                width: 50%;
+                display: flex;
+                flex-flow: row nowrap;
+                span.hamburguesa {
+                    font-size: 22px;
+                    align-self: flex-start
                 }
-                .cerrar {
+
+                span.cerrar {
                     display: none;
                 }
             }
+
+            .navbar-menu {
+                nav ul {
+                    display: none;
+                }
+            }
+
+
         }
-        img {
-            margin: 0 auto;
-            text-align: left;
+
+        #toggle:checked+div.navbar {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            width: 100%;
+            .navbar-label {
+                width: 50%;
+                align-content: flex-end;
+                label {
+                    border: 1px solid black;
+
+                    span.hamburguesa {
+                        display: none;
+                    }
+
+                    span.cerrar {
+                        display: inline-block;
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            .navbar-imagen {
+                width: 50%;
+                img {
+                    text-align: left;
     
+                }
+            }
+
+            .navbar-menu {
+                border: 1px solid black;
+                width: 100%;
+                nav ul {
+                    display: flex;
+                    flex-flow: column wrap;
+                    padding: 0;
+                    background-color: #0000EC;
+
+                    li {
+                        padding: 5% 2% 5% 5%;
+
+                    }
+
+                    a {
+                        text-align: start;
+                        display: block;
+                        color: white;
+                    }
+                }
+            }
+
+
+
         }
+
 
     }
 
@@ -119,6 +182,7 @@ body {
         .descripcion-mobile {
             display: block;
         }
+
         .descripcion-desktop {
             display: none;
         }

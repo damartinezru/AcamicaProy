@@ -26,7 +26,15 @@ body {
   color: black;
 }
 
-.menu-inicial label span {
+.menu-inicial .navbar-check label {
+  display: inline-block;
+}
+
+.menu-inicial .navbar-check label span.hamburguesa {
+  display: none;
+}
+
+.menu-inicial .navbar-check label span.cerrar {
   display: none;
 }
 
@@ -70,10 +78,76 @@ body {
 }
 
 @media (max-width: 420px) {
-  .menu-inicial nav ul {
+  .menu-inicial #toggle:not(:checked) + div.navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+  }
+  .menu-inicial #toggle:not(:checked) + div.navbar .navbar-imagen {
+    width: 50%;
+  }
+  .menu-inicial #toggle:not(:checked) + div.navbar .navbar-label {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .menu-inicial #toggle:not(:checked) + div.navbar .navbar-label span.hamburguesa {
+    font-size: 22px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .menu-inicial #toggle:not(:checked) + div.navbar .navbar-label span.cerrar {
     display: none;
   }
-  .menu-inicial #toggle:checked + nav ul {
+  .menu-inicial #toggle:not(:checked) + div.navbar .navbar-menu nav ul {
+    display: none;
+  }
+  .menu-inicial #toggle:checked + div.navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border: 1px solid black;
+    width: 100%;
+  }
+  .menu-inicial #toggle:checked + div.navbar .navbar-label {
+    width: 50%;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+  }
+  .menu-inicial #toggle:checked + div.navbar .navbar-label label {
+    border: 1px solid black;
+  }
+  .menu-inicial #toggle:checked + div.navbar .navbar-label label span.hamburguesa {
+    display: none;
+  }
+  .menu-inicial #toggle:checked + div.navbar .navbar-label label span.cerrar {
+    display: inline-block;
+    font-size: 22px;
+  }
+  .menu-inicial #toggle:checked + div.navbar .navbar-imagen {
+    width: 50%;
+  }
+  .menu-inicial #toggle:checked + div.navbar .navbar-imagen img {
+    text-align: left;
+  }
+  .menu-inicial #toggle:checked + div.navbar .navbar-menu {
+    border: 1px solid black;
+    width: 100%;
+  }
+  .menu-inicial #toggle:checked + div.navbar .navbar-menu nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -84,29 +158,13 @@ body {
     padding: 0;
     background-color: #0000EC;
   }
-  .menu-inicial #toggle:checked + nav ul li {
+  .menu-inicial #toggle:checked + div.navbar .navbar-menu nav ul li {
     padding: 5% 2% 5% 5%;
   }
-  .menu-inicial #toggle:checked + nav ul a {
+  .menu-inicial #toggle:checked + div.navbar .navbar-menu nav ul a {
     text-align: start;
     display: block;
     color: white;
-  }
-  .menu-inicial #toggle:checked + label span.hamburguesa {
-    display: none;
-  }
-  .menu-inicial #toggle:checked + label span.cerrar {
-    display: block;
-  }
-  .menu-inicial label span {
-    display: inline-block;
-  }
-  .menu-inicial label span .cerrar {
-    display: none;
-  }
-  .menu-inicial img {
-    margin: 0 auto;
-    text-align: left;
   }
   .seccion-inicial .descripcion-mobile {
     display: block;

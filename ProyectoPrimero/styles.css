@@ -159,9 +159,6 @@
 .seccion-podcast {
   font-family: "IBM Plex Sans", sans-serif;
   color: #FFFFFF;
-  letter-spacing: 0;
-  line-height: 42px;
-  font-weight: lighter;
   padding: 0;
   margin: 0;
   background-color: #0000EC;
@@ -177,12 +174,117 @@
 
 .seccion-podcast .podcast {
   padding: 5%;
-  margin: 10% 0 10% 0;
+  margin: 10% 0 30% 0;
   -webkit-transform: skewY(6deg);
           transform: skewY(6deg);
 }
 
 .seccion-podcast .podcast iframe {
   padding-top: 5%;
+}
+
+.seccion-imagen-superpuesta {
+  -webkit-transform: translate(0, -15%);
+          transform: translate(0, -15%);
+}
+
+.seccion-imagen-superpuesta img {
+  width: 100%;
+}
+
+.seccion-faq {
+  display: -ms-grid;
+  display: grid;
+  padding: 0 5% 0 5%;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 30% 40% 40%;
+      grid-template-rows: 30% 40% 40%;
+  -webkit-transform: translate(0, -15%);
+          transform: translate(0, -15%);
+}
+
+.seccion-faq h1 {
+  margin-right: 15%;
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 42px;
+  color: #060A24;
+}
+
+.seccion-faq p {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  line-height: 22px;
+  color: #060A24;
+}
+
+.seccion-invitados {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 7% (15%)[5];
+      grid-template-rows: 7% repeat(5, 15%);
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 42px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.seccion-invitados h1 {
+  padding: 5%;
+}
+
+.seccion-invitados img {
+  width: 100%;
+}
+
+.seccion-temarios {
+  font-family: "IBM Plex Sans", sans-serif;
+  padding: 5%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 17% 17% 17% 17% 17% 17% 17% 17%;
+      grid-template-rows: 17% 17% 17% 17% 17% 17% 17% 17%;
+  justify-items: center;
+  height: 100%;
+}
+
+.seccion-temarios span {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #060A24;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.seccion-novedades {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: (20%)[2];
+      grid-template-rows: repeat(2, 20%);
+}
+
+.seccion-novedades h1 {
+  margin-top: 90%;
+  padding: 5%;
+  font-family: "IBM Plex Sans", sans-serif;
+  text-align: center;
+  font-size: 36px;
+}
+
+.seccion-novedades a {
+  margin-top: 90%;
+  padding-top: 20%;
+  text-align: center;
+  text-decoration: none;
+  color: #060A24;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  background-color: red;
 }
 /*# sourceMappingURL=styles.css.map */

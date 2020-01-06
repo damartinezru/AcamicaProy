@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "styles-for-media-queries.scss",
+        "variables.scss"
+    ],
+    "names": [],
+    "file": "styles-for-media-queries.css"
+}

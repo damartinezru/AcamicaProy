@@ -1,30 +1,32 @@
 @import "variables.scss";
 
 %styles-for-media-queries {
-  @media only screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
+
+
     .menu-inicial {
       padding: 2% 5% 5% 5%;
-
+  
       #toggle {
         display: none;
       }
- 
+  
       .navbar {
         display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: 20%;
-
+  
         .navbar-imagen {
           grid-area: 1 /1/ 1/ 1;
           justify-self: flex-start;
           width: 36px;
           height: 36px;
         }
-
+  
         .navbar-label {
           display: none;
         }
-
+  
         .navbar-menu {
           grid-area: 1/ 2/ 1/ 2;
           font-family: "IBM Plex Mono", monospace;
@@ -37,7 +39,7 @@
               list-style-type: none;
               display: inline-block;
               padding: 0 4% 0 4%;
-
+  
               a {
                 text-decoration: none;
                 color: $primary-color-font;
@@ -55,16 +57,16 @@
           }
         }
       }
-
+  
       #toggle:not(:checked) + div.navbar {
         .navbar-menu {
           display: block;
         }
       }
     }
-
+  
     .seccion-inicial {
-      padding: 5% 10% 10% 10%;
+      padding: 5% 10% 0% 10%;
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 30% 30% 30%;
@@ -73,9 +75,7 @@
         grid-area: 1 / 1 / 1 / 1;
         font-family: $primary-font;
         font-size: 1.8em;
-        font-weight: 100;
         color: $primary-color-font;
-        letter-spacing: 0;
         .linea {
           text-decoration: line-through;
         }
@@ -92,14 +92,13 @@
         color: $primary-color-font;
         justify-self: flex-start;
         font-size: 0.9em;
- 
       }
-
+  
       .boton-seccion-inicial {
         background-color: $secondary-background-color;
         justify-self: left;
-        width: 18%;
-        padding-top: 1%;
+        width: 20%;
+        padding: 1% 0 0 0;
         text-align: center;
         a {
           font-family: $third-font;
@@ -114,14 +113,13 @@
         }
       }
     }
- 
-    .seccion-podcast {
   
+    .seccion-podcast {
       font-family: $primary-font;
       color: $third-background-color;
       padding: 0;
       margin: 0;
-      background-color: $primary-background-color;
+      background: $primary-gradient;
       transform: skewY(-6deg);
       display: flex;
       flex-wrap: wrap;
@@ -129,12 +127,13 @@
       .podcast {
         margin: 10% 0 10% 0;
         transform: skewY(6deg);
-        align-self: center;
+        padding: 0%;
         h1 {
-          padding: 0% 10% 2% 10%;
+          padding: 0% 10% 0% 10%;
           font-size: 48px;
         }
         iframe {
+          padding: 3%;
           width: 584px;
           height: 232px;
         }
@@ -147,7 +146,7 @@
         height: 660px;
       }
     }
-
+  
     .seccion-faq {
       display: grid;
       padding: 0 $common-padding 0 $common-padding;
@@ -167,7 +166,7 @@
         color: #060a24;
       }
     }
-
+  
     .seccion-invitados {
       display: grid;
       grid-template-columns: 100%;
@@ -208,7 +207,7 @@
         }
       }
     }
-
+  
     .seccion-novedades {
       display: flex;
       flex-flow: column nowrap;
@@ -245,13 +244,13 @@
         }
       }
     }
-
+  
     footer {
       padding-top: 10%;
       text-align: center;
       color: #060a24;
       font-weight: 100;
-
+  
       h2 {
         font-family: $secondary-font;
         font-size: 14px;
@@ -261,4 +260,6 @@
       }
     }
   }
+  
+  
 }

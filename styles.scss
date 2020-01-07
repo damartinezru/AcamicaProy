@@ -1,21 +1,24 @@
 @import "styles-for-media-queries.scss";
 @import "styles-for-media-queries.scss";
 @import "variables.scss";
-  
- 
+     
+         
 * {
-  margin: 0;
+  margin: 0;       
   padding: 0;
 }
 body {
   @extend %styles-for-media-queries;
+}  
+html{
+  width: 100vw;
 }
 .menu-inicial {
   padding: $common-padding;
 
   #toggle {
-    display: none;
-  }
+    display: none;     
+  } 
 
   .navbar {
     display: grid;
@@ -24,7 +27,7 @@ body {
 
     .navbar-imagen {
       grid-area: 1 /1/ 1/ 1;
-      justify-self: flex-start;
+      justify-self: flex-start;  
     }
 
     .navbar-label {
@@ -76,12 +79,12 @@ body {
         span.hamburguesa {
           display: none;
         }
-
+  
         span.cerrar {
           display: block;
         }
       }
-    }
+    } 
   }
 }
   
@@ -96,7 +99,8 @@ body {
     grid-area: 1 / 1 / 1 / 1;
     font-family: $primary-font;
     font-size: 1.2em;
-     color: $primary-color-font;
+    color: $primary-color-font;
+    width: 90%;
     .linea {
       text-decoration: line-through;
     }
@@ -114,122 +118,122 @@ body {
   }
   .descripcion-desktop {
     display: none;
-  }
-
+  } 
+ 
   .boton-seccion-inicial {
-    background-color: #00f3bb;
+    background-color: $secondary-background-color;
     justify-self: left;
     width: 100%; 
-    padding: 4% 0 0 0;
-    text-align: center;
-    a {  
-      font-family: $third-font;
-      color: $primary-color-font;
-      text-decoration: none;
-    } 
+    display: flex;
+    justify-content: center; 
+      a {  
+        font-family: $third-font;
+        color: $primary-color-font;
+        text-decoration: none;
+        align-self: center;
+      }  
     &:hover {
       background-image: $primary-gradient;
       a {
-        color: #ffffff;
+        color: $third-background-color;
       }
     }
   }
 }
- 
+  
 .seccion-podcast {  
   font-family: $primary-font;
-  letter-spacing: 0;
-  font-weight: 100;
-  color: #ffffff;
-  padding: 0;    
-  margin: 0;
+  color: $third-background-color;
+  padding: 0;      
+  margin: 0;             
   background: $primary-gradient;
   transform: skewY(-6deg);
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 8% repeat(4, 26%);
-  .podcast { 
-    padding: $common-padding;
+  grid-template-rows: 8% repeat(4, 30%);       
+  .podcast {         
+    padding: $common-padding;  
     margin: 10% 0 30% 0;
-    transform: skewY(6deg);
+    transform: skewY(6deg); 
     iframe {
       padding-top: 5%;
-      width:100%;
-      height:232 px;
-    }
-  } 
-}      
+      width:100%; 
+      height:232 px;    
+    }    
+  }  
+}       
+   
+.seccion-imagen-superpuesta {  
+  img {      
+    width: 100%;  
+    transform: translate(0, -15%);     
 
-.seccion-imagen-superpuesta {
-  transform: translate(0, -15%);
-  img {
-    width: 100%;
-  }
-}
+  }   
+} 
 
-.seccion-faq {
+.seccion-faq {   
   display: grid;
-  padding: 0 $common-padding 0 $common-padding;
+  padding: 0 $common-padding 0 $common-padding;  
   grid-template-columns: 100%;
-  grid-template-rows: 30% 40% 40%;
+  grid-template-rows: 30% 40% 40%; 
   transform: translate(0, -15%);
   h1 {
     margin-right: 15%;
     font-family: $primary-font;
     line-height: 42px;
-    color: #060a24;
+    color: $primary-color-font;  
   } 
   p {
     font-family: $secondary-font;
     font-size: 14px;
-    line-height: 22px;
-    color: #060a24;
-  }
-}
-
-.seccion-invitados {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 7% repeat(5, 15%);
-  color: #060a24;
+    line-height: 22px;         
+    color: $primary-color-font;
+  }   
+}   
+  
+.seccion-invitados {   
+  display: grid;    
+  grid-template-columns: 100%;  
+  grid-template-rows: 10% repeat(5, 15%);
+  color: $primary-color-font;
   letter-spacing: 0;
   line-height: 42px;
   font-family: $primary-font;
-  h1 {
-    padding: $common-padding;
-  }
-  img {
-    width: 100%;
-  }
-}
-.seccion-temarios {
-  font-family: $primary-font;
-  padding: 5%;
-  .temario {
+  h1 {   
+    padding: $common-padding;  
+  }    
+  img {  
+    width: 100%;  
+  }    
+}      
+.seccion-temarios {      
+  font-family: $primary-font; 
+  padding: 5%;           
+  .temario {       
     color: $primary-color-font;
-    font-weight: bold;
-    font-size: 1.2em;
+    font-weight: bold; 
+    font-size: 1.2em;    
     font-weight: 600;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 80% 20%;
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 10%;          
     img {
       grid-area: 1/1/1/1;
       justify-self: center;
-      padding: 4%;
-    }
-    span {
+      padding: 4%;  
+    } 
+    span {  
       grid-area: 2/1/2/1;
       text-align: center;
       align-self: flex-end;
-    }
+    }  
   }
 }
 
 .seccion-novedades {
-  display: flex;
+  display: flex; 
   flex-flow: column nowrap;
   background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
   padding-bottom: 15%;
@@ -245,7 +249,7 @@ body {
     font-family: $primary-font;
     text-align: center;
     font-size: 2em;
-    color: #ffffff;
+    color: $third-background-color;
     justify-self: center;
     padding: 5%;
   }
@@ -255,7 +259,7 @@ body {
     color: $primary-color-font;
     font-family: $third-font;
     font-weight: 500;
-    background-color: #00f3bb;
+    background-color: $secondary-background-color;
     margin: 5%;
     padding: 4%;
     a {
@@ -264,19 +268,23 @@ body {
     }
   }
 }
-
-footer {
-  padding-top: 10%;
+       
+footer {       
+  padding-top: 10%;    
   text-align: center;
-  color: #060a24;
+  color: $primary-color-font;
   font-weight: 100;
+   .derechos-footer {
+    h2 {
+      font-family: $secondary-font;
+      font-size: 14px; 
+    } 
+   } 
+   .iconos-footer {
+    i {
+      padding: 5%;
+    }
+   }
 
-  h2 {
-    font-family: $secondary-font;
-    font-size: 14px;
-  }
-  i {
-    padding: 5%;
-  }
 }
 

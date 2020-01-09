@@ -1,7 +1,7 @@
 @import "variables.scss";
 
-%styles-for-media-queries {
-  @media screen and (min-width: 700px) {
+%styles-desktop{ 
+  @media screen and (min-width: 1024px) {
     .menu-inicial {
       padding: 2% 5% 5% 5%;
 
@@ -14,7 +14,7 @@
           height: 36px;
         }
 
-        .navbar-label {
+        .navbar-label { 
           display: none;
         }
 
@@ -71,12 +71,10 @@
 
       .boton-seccion-inicial {
         width: 20%;
-      }
+      } 
     }
 
     .seccion-podcast {
-      padding: 0;
-      margin: 0;
       .podcast {
         padding: 0 5% 0 5%;
         margin: 10% 0 15% 0;
@@ -85,7 +83,6 @@
           font-size: 48px;
         }
         iframe {
-            overflow: hidden;   
             width: 45%; 
             margin: 0 2% 0 2%; 
         }
@@ -93,14 +90,13 @@
     }
     .seccion-imagen-superpuesta {
       width: 40%;
-      height: 50vh;
+      height: 50vh;  
       margin-left: 10%;
       img {
         width: 70%;
-        transform: translate(0, -15%); 
       }
     }
-
+  
     .seccion-faq {
       transform: translate(0, -70%); 
       grid-template-columns: 60%; 
@@ -111,7 +107,7 @@
         margin: 0;
       }
     }
- 
+  
     .seccion-invitados { 
       margin-top: 5%;
       grid-template-columns: 33.33% 33.33% 33.33%; 
@@ -121,9 +117,7 @@
         padding: 0 0 0 12% ;   
         grid-area: 1/1/1/4; 
       }
-      img { 
-        width: 100%;
-      }
+
     }
     .seccion-temarios {
       display: grid;
@@ -133,22 +127,8 @@
         grid-area: 1/1/1/5;
       } 
       .temario {
-        color: $primary-color-font;
-        font-weight: bold;
-        font-size: 1.2em;
-        font-weight: 600;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 80% 20%;
-        margin: 0;
-        img {
-          grid-area: 1/1/1/1;
-          justify-self: center;
-          margin: 4%;
-        }
+        margin: 0; 
         span {
-          grid-area: 2/1/2/1;
-          text-align: center;
           margin: 4%;
           align-self: center;
         }
@@ -157,47 +137,20 @@
 
     .seccion-novedades {
       display: flex;
-      flex-flow: column nowrap;
-      background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
       padding-bottom: 0; 
-      svg {
-        height: 10vw;
-        justify-self: flex-start;
-        top: 0;
-        left: 0;
-        transform: rotate(180deg);
-        z-index: 1;
-      }
       h1 {
-        font-family: $primary-font;
-        text-align: center;
         font-size: 48px;
-        color: $third-background-color;
-        justify-self: center;
-        padding: 5%;
       }
       span {
-        text-align: center;
-        text-decoration: none;
-        color: $primary-color-font;
-        font-family: $third-font;
-        font-weight: 500;
-        background-color: $secondary-background-color;
         justify-self: center;
         width: 30%;
 	      padding: 2%;
 	       margin: 5%;
 	      align-self: center;
-        a {
-          text-decoration: none;
-          color: $primary-color-font;
-        }
       }
     }
 
     footer {
-      color: $primary-color-font;
-      font-weight: 100%;
       padding-top: 5%;
       margin-bottom: 5%;
       display: flex;
@@ -207,8 +160,6 @@
         justify-self: left;
         width: 50%;
         h2 {
-          font-family: $secondary-font;
-          font-size: 14px;
           text-align: left;
         }
       }
@@ -217,7 +168,7 @@
           margin: 0%;
           padding: 0%;
         }
-      }
+      } 
 
     }
   }

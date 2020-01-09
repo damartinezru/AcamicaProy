@@ -2,9 +2,9 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "styles-for-media-queries.scss",
+        "styles-tablet.scss",
         "variables.scss"
     ],
     "names": [],
-    "file": "styles-for-media-queries.css"
+    "file": "styles-tablet.css"
 }

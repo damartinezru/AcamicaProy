@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "styles-desktop.scss",
+        "variables.scss"
+    ],
+    "names": [],
+    "file": "styles-desktop.css"
+}

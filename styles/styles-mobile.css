@@ -1,4 +1,4 @@
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1024px) {
   body .menu-inicial {
     padding: 2% 5% 5% 5%;
   }
@@ -65,10 +65,6 @@
   body .seccion-inicial .boton-seccion-inicial {
     width: 20%;
   }
-  body .seccion-podcast {
-    padding: 0;
-    margin: 0;
-  }
   body .seccion-podcast .podcast {
     padding: 0 5% 0 5%;
     margin: 10% 0 15% 0;
@@ -78,7 +74,6 @@
     font-size: 48px;
   }
   body .seccion-podcast .podcast iframe {
-    overflow: hidden;
     width: 45%;
     margin: 0 2% 0 2%;
   }
@@ -89,8 +84,6 @@
   }
   body .seccion-imagen-superpuesta img {
     width: 70%;
-    -webkit-transform: translate(0, -15%);
-            transform: translate(0, -15%);
   }
   body .seccion-faq {
     -webkit-transform: translate(0, -70%);
@@ -120,9 +113,6 @@
     -ms-grid-column-span: 3;
     grid-area: 1/1/1/4;
   }
-  body .seccion-invitados img {
-    width: 100%;
-  }
   body .seccion-temarios {
     display: -ms-grid;
     display: grid;
@@ -138,31 +128,9 @@
     grid-area: 1/1/1/5;
   }
   body .seccion-temarios .temario {
-    color: #060A24;
-    font-weight: bold;
-    font-size: 1.2em;
-    font-weight: 600;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: 80% 20%;
-        grid-template-rows: 80% 20%;
     margin: 0;
   }
-  body .seccion-temarios .temario img {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: 1/1/1/1;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    margin: 4%;
-  }
   body .seccion-temarios .temario span {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: 2/1/2/1;
-    text-align: center;
     margin: 4%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -172,38 +140,12 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
     padding-bottom: 0;
   }
-  body .seccion-novedades svg {
-    height: 10vw;
-    justify-self: flex-start;
-    top: 0;
-    left: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    z-index: 1;
-  }
   body .seccion-novedades h1 {
-    font-family: "IBM Plex Sans";
-    text-align: center;
     font-size: 48px;
-    color: #ffffff;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    padding: 5%;
   }
   body .seccion-novedades span {
-    text-align: center;
-    text-decoration: none;
-    color: #060A24;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 500;
-    background-color: #00f3bb;
     -ms-grid-column-align: center;
         justify-self: center;
     width: 30%;
@@ -213,13 +155,7 @@
         -ms-grid-row-align: center;
         align-self: center;
   }
-  body .seccion-novedades span a {
-    text-decoration: none;
-    color: #060A24;
-  }
   body footer {
-    color: #060A24;
-    font-weight: 100%;
     padding-top: 5%;
     margin-bottom: 5%;
     display: -webkit-box;
@@ -238,8 +174,6 @@
     width: 50%;
   }
   body footer .derechos-footer h2 {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 14px;
     text-align: left;
   }
   body footer .iconos-footer i {
@@ -248,13 +182,13 @@
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   body .menu-inicial {
     padding: 2% 5% 5% 5%;
   }
   body .menu-inicial .navbar {
-    -ms-grid-columns: 40% 60%;
-        grid-template-columns: 40% 60%;
+    -ms-grid-columns: 30% 70%;
+        grid-template-columns: 30% 70%;
     -ms-grid-rows: 20%;
         grid-template-rows: 20%;
   }
@@ -269,6 +203,8 @@
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: 1/ 2/ 1/ 2;
+    -ms-flex-line-pack: space-evenly;
+        align-content: space-evenly;
   }
   body .menu-inicial .navbar .navbar-menu nav ul {
     background-color: transparent;
@@ -276,7 +212,7 @@
   }
   body .menu-inicial .navbar .navbar-menu nav ul li {
     display: inline-block;
-    padding: 0 4% 0 4%;
+    padding: 0 0 0 0;
   }
   body .menu-inicial .navbar .navbar-menu nav ul li a {
     text-decoration: none;
@@ -300,7 +236,7 @@
     grid-row-gap: 30%;
   }
   body .seccion-inicial .titulo {
-    font-size: 1.8em;
+    font-size: 1.3em;
   }
   body .seccion-inicial .descripcion-mobile {
     display: none;
@@ -315,10 +251,6 @@
   body .seccion-inicial .boton-seccion-inicial {
     width: 20%;
   }
-  body .seccion-podcast {
-    padding: 0;
-    margin: 0;
-  }
   body .seccion-podcast .podcast {
     padding: 0 5% 0 5%;
     margin: 10% 0 15% 0;
@@ -328,25 +260,19 @@
     font-size: 48px;
   }
   body .seccion-podcast .podcast iframe {
-    overflow: hidden;
     width: 45%;
     margin: 0 2% 0 2%;
   }
   body .seccion-imagen-superpuesta {
     width: 40%;
-    height: 50vh;
+    height: 40vh;
     margin-left: 10%;
-  }
-  body .seccion-imagen-superpuesta img {
-    width: 70%;
-    -webkit-transform: translate(0, -15%);
-            transform: translate(0, -15%);
   }
   body .seccion-faq {
     -webkit-transform: translate(0, -70%);
             transform: translate(0, -70%);
-    -ms-grid-columns: 60%;
-        grid-template-columns: 60%;
+    -ms-grid-columns: 80%;
+        grid-template-columns: 80%;
     -ms-grid-rows: 30% 40% 40%;
         grid-template-rows: 30% 40% 40%;
     padding: 0;
@@ -354,6 +280,9 @@
   }
   body .seccion-faq h1 {
     margin: 0;
+  }
+  body .seccion-faq p {
+    line-height: 15px;
   }
   body .seccion-invitados {
     margin-top: 5%;
@@ -370,9 +299,6 @@
     -ms-grid-column-span: 3;
     grid-area: 1/1/1/4;
   }
-  body .seccion-invitados img {
-    width: 100%;
-  }
   body .seccion-temarios {
     display: -ms-grid;
     display: grid;
@@ -388,31 +314,9 @@
     grid-area: 1/1/1/5;
   }
   body .seccion-temarios .temario {
-    color: #060A24;
-    font-weight: bold;
-    font-size: 1.2em;
-    font-weight: 600;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: 80% 20%;
-        grid-template-rows: 80% 20%;
     margin: 0;
   }
-  body .seccion-temarios .temario img {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: 1/1/1/1;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    margin: 4%;
-  }
   body .seccion-temarios .temario span {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: 2/1/2/1;
-    text-align: center;
     margin: 4%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -422,38 +326,12 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
     padding-bottom: 0;
   }
-  body .seccion-novedades svg {
-    height: 10vw;
-    justify-self: flex-start;
-    top: 0;
-    left: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    z-index: 1;
-  }
   body .seccion-novedades h1 {
-    font-family: "IBM Plex Sans";
-    text-align: center;
     font-size: 48px;
-    color: #ffffff;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    padding: 5%;
   }
   body .seccion-novedades span {
-    text-align: center;
-    text-decoration: none;
-    color: #060A24;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 500;
-    background-color: #00f3bb;
     -ms-grid-column-align: center;
         justify-self: center;
     width: 30%;
@@ -463,13 +341,7 @@
         -ms-grid-row-align: center;
         align-self: center;
   }
-  body .seccion-novedades span a {
-    text-decoration: none;
-    color: #060A24;
-  }
   body footer {
-    color: #060A24;
-    font-weight: 100%;
     padding-top: 5%;
     margin-bottom: 5%;
     display: -webkit-box;
@@ -488,8 +360,6 @@
     width: 50%;
   }
   body footer .derechos-footer h2 {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 14px;
     text-align: left;
   }
   body footer .iconos-footer i {
@@ -839,4 +709,4 @@ footer .derechos-footer h2 {
 footer .iconos-footer i {
   padding: 5%;
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles-mobile.css.map */

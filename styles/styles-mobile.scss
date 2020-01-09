@@ -1,26 +1,25 @@
-@import "styles-for-media-queries.scss";
-@import "styles-for-media-queries.scss";
-@import "variables.scss";
+@import "./styles-desktop.scss";
+@import "./styles-tablet.scss";
+@import "./variables.scss";
      
-         
-* {
-  margin: 0;       
-  padding: 0;
+           
+* { 
+  margin: 0;         
+  padding: 0; 
 }
 body {
-  @extend %styles-for-media-queries;
+  @extend %styles-tablet;
+  @extend %styles-desktop;
 }  
-// html{
-//   width: 100vw;
-// }
+ 
 .menu-inicial {
   padding: $common-padding;
 
   #toggle {
     display: none;     
-  } 
+  }   
  
-  .navbar {
+  .navbar { 
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 20%;
@@ -28,7 +27,7 @@ body {
     .navbar-imagen {
       grid-area: 1 /1/ 1/ 1;
       justify-self: flex-start;  
-    }
+    } 
 
     .navbar-label {
       grid-area: 1/ 2/ 1/ 2;
@@ -46,18 +45,18 @@ body {
         }
       }
     }
-    .navbar-menu {
+    .navbar-menu {   
       grid-area: 2/1/2/3;
       font-family: "IBM Plex Mono", monospace;
       nav ul {
         padding: 0;
         margin: 0;
         background-color: $primary-background-color;
-
+ 
         li {
           list-style-type: none;
-          padding: 5% 2% 5% 5%;
-
+          padding: 5% 2% 5% 5%; 
+  
           a {
             text-decoration: none;
             color: $primary-color-font;
@@ -163,17 +162,17 @@ body {
       border: none; 
     }     
   }  
-}       
-   
+}           
+    
 .seccion-imagen-superpuesta {  
   img {      
-    width: 100%;  
+    width: 100%;    
     transform: translate(0, -15%);     
 
-  }   
+  }    
 } 
-
-.seccion-faq {   
+          
+.seccion-faq {         
   display: grid;
   padding: 0 $common-padding 0 $common-padding;  
   grid-template-columns: 100%;
@@ -220,7 +219,7 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 80% 20%;
     margin-top: 10%;
-    margin-bottom: 10%;          
+    margin-bottom: 10%;           
     img {
       grid-area: 1/1/1/1;
       justify-self: center;
@@ -283,7 +282,7 @@ footer {
     } 
    } 
    .iconos-footer {
-    i {
+    i { 
       padding: 5%;
     }
    }

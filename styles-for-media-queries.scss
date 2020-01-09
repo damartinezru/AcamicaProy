@@ -5,18 +5,11 @@
     .menu-inicial {
       padding: 2% 5% 5% 5%;
 
-      #toggle {
-        display: none;
-      }
-
       .navbar {
-        display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: 20%;
 
         .navbar-imagen {
-          grid-area: 1 /1/ 1/ 1;
-          justify-self: flex-start;
           width: 36px;
           height: 36px;
         }
@@ -27,20 +20,15 @@
 
         .navbar-menu {
           grid-area: 1/ 2/ 1/ 2;
-          font-family: "IBM Plex Mono", monospace;
           nav ul {
-            padding: 0;
-            margin: 0;
             background-color: transparent;
             text-align: right;
             li {
-              list-style-type: none;
               display: inline-block;
               padding: 0 4% 0 4%;
 
               a {
                 text-decoration: none;
-                color: $primary-color-font;
                 &:hover {
                   text-decoration: line-through;
                   color: $secondary-background-color;
@@ -65,21 +53,10 @@
 
     .seccion-inicial {
       padding: 5% 10% 0% 10%;
-      display: grid;
-      grid-template-columns: 100%;
       grid-template-rows: 30% 30% 30%;
       grid-row-gap: 30%;
       .titulo {
-        grid-area: 1 / 1 / 1 / 1;
-        font-family: $primary-font;
         font-size: 1.8em;
-        color: $primary-color-font;
-        .linea {
-          text-decoration: line-through;
-        }
-        .punto {
-          color: $primary-background-color;
-        }
       }
       .descripcion-mobile {
         display: none;
@@ -98,21 +75,17 @@
     }
 
     .seccion-podcast {
-      font-family: $primary-font;
-      color: $third-background-color;
       padding: 0;
       margin: 0;
-      background: $primary-gradient;
-      transform: skewY(-6deg); 
       .podcast {
-        transform: skewY(6deg);
         padding: 0 5% 0 5%;
-        margin: 10% 0 15% 0;   
+        margin: 10% 0 15% 0;
         h1 {
           padding: 0% 5% 0% 5%;
           font-size: 48px;
         }
         iframe {
+            overflow: hidden;   
             width: 45%; 
             margin: 0 2% 0 2%; 
         }
@@ -121,9 +94,7 @@
     .seccion-imagen-superpuesta {
       width: 40%;
       height: 50vh;
-      padding: 0; 
       margin-left: 10%;
-      //transform: translate(10%, -20%);   
       img {
         width: 70%;
         transform: translate(0, -15%); 
@@ -138,28 +109,14 @@
       margin-left: 50%;
       h1 {
         margin: 0;
-        font-family: $primary-font;
-        line-height: 42px;
-        color: $primary-color-font;
-      }
-      p {
-        font-family: $secondary-font;
-        font-size: 14px;
-        line-height: 22px;
-        color: $primary-color-font;
       }
     }
  
     .seccion-invitados { 
-      display: grid;
       margin-top: 5%;
       grid-template-columns: 33.33% 33.33% 33.33%; 
       grid-template-rows: 20% repeat(2, 39%); 
-      color: $primary-color-font;
       font-size: 1.2em;
-      letter-spacing: 0;
-      line-height: 42px;
-      font-family: $primary-font;
       h1 { 
         padding: 0 0 0 12% ;   
         grid-area: 1/1/1/4; 

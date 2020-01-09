@@ -10,16 +10,16 @@
 body {
   @extend %styles-for-media-queries;
 }  
-html{
-  width: 100vw;
-}
+// html{
+//   width: 100vw;
+// }
 .menu-inicial {
   padding: $common-padding;
 
   #toggle {
     display: none;     
   } 
-
+ 
   .navbar {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -60,7 +60,7 @@ html{
 
           a {
             text-decoration: none;
-            color: white;
+            color: $primary-color-font;
           }
         }
       }
@@ -133,9 +133,9 @@ html{
         align-self: center;
       }  
     &:hover {
-      background-image: $primary-gradient;
+      background-image: $secondary-gradient; 
       a {
-        color: $third-background-color;
+        color: $third-background-color; 
       }
     }
   }
@@ -151,15 +151,17 @@ html{
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 8% repeat(4, 30%);       
-  .podcast {         
+  .podcast {          
     padding: $common-padding;  
     margin: 10% 0 30% 0;
     transform: skewY(6deg); 
     iframe {
       padding-top: 5%;
       width:100%; 
-      height:232 px;    
-    }    
+      height:232px;    
+      overflow: hidden;  
+      border: none; 
+    }     
   }  
 }       
    
@@ -208,7 +210,7 @@ html{
 }      
 .seccion-temarios {      
   font-family: $primary-font; 
-  padding: 5%;           
+  padding: 5%;   
   .temario {       
     color: $primary-color-font;
     font-weight: bold; 
@@ -251,7 +253,7 @@ html{
     font-size: 2em;
     color: $third-background-color;
     justify-self: center;
-    padding: 5%;
+    padding: 5%; 
   }
   span {
     text-align: center;

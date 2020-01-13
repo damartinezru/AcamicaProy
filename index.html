@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="/styles/styles-mobile.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,400,500%7cIBM+Plex+Sans:100,300%7cRoboto+Mono&display=swap"
-      rel="stylesheet"
-    />
+    <link href="./styles/styles-mobile.css" rel="stylesheet" />
     <link
       href="https://use.fontawesome.com/releases/v5.0.4/css/all.css"
       rel="stylesheet"
@@ -17,7 +13,7 @@
   </head>
 
   <body>
-    <div class="menu-inicial">
+    <header class="menu-inicial">
       <input type="checkbox" id="toggle" />
       <div class="navbar">
         <div class="navbar-imagen">
@@ -40,8 +36,8 @@
           </nav>
         </div>
       </div>
-    </div>
-    <div class="seccion-inicial">
+    </header>
+    <section class="seccion-inicial">
       <div class="titulo">
         <h1>
           Hello <span class="linea">world</span> <span>pale blue dot</span>
@@ -66,49 +62,43 @@
       <div class="boton-seccion-inicial">
         <a href="#">CONOCE M&Aacute;S</a>
       </div>
-    </div>
-    <div class="seccion-podcast" id="podcast">
+    </section>
+    <section class="seccion-podcast" id="podcast">
       <div class="podcast">
         <h1>Episodios</h1>
         <iframe
           src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt"
-          allowtransparency="true"
-          allow="encrypted-media"
         ></iframe>
         <iframe
           src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby"
-          allowtransparency="true"
-          allow="encrypted-media"
         ></iframe>
         <iframe
           src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv"
-          allowtransparency="true"
-          allow="encrypted-media"
         ></iframe>
         <iframe
           src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn"
-          allowtransparency="true"
-          allow="encrypted-media"
         ></iframe>
       </div>
-    </div>
-    <div class="seccion-imagen-superpuesta"> 
-      <img src="./assets/phone.png" alt="phone" />
-    </div>
-    <div class="seccion-faq" id="faq">
-      <h1>De d&oacute;nde venimos</h1>
-      <p>
-        Our posturings, our imagined self-importance, the delusion that we have
-        some privileged position in the Universe, are challenged by this point
-        of pale light.
-      </p>
-      <p>
-        Our planet is a lonely speck in the great enveloping cosmic dark. In our
-        obscurity, in all this vastness, there is no hint that help will come
-        from elsewhere to save us from ourselves.
-      </p>
-    </div>
-    <div class="seccion-invitados" id="invitados">
+    </section>
+    <section class="seccion-about-us">
+      <div class="imagen-about-us">
+        <img src="./assets/phone.png" alt="phone" />
+      </div>
+      <div class="descripcion-about-us">
+        <h1>De d&oacute;nde venimos</h1>
+        <p>
+          Our posturings, our imagined self-importance, the delusion that we
+          have some privileged position in the Universe, are challenged by this
+          point of pale light.
+        </p>
+        <p>
+          Our planet is a lonely speck in the great enveloping cosmic dark. In
+          our obscurity, in all this vastness, there is no hint that help will
+          come from elsewhere to save us from ourselves.
+        </p>
+      </div>
+    </section>
+    <section class="seccion-invitados" id="invitados">
       <h1>Invitadas/os estelares</h1>
       <img src="./assets/grace-hopper.png" alt="grace-hopper" />
       <img src="./assets/Katie-Bouman.png" alt="Katie-Bouman" />
@@ -118,12 +108,12 @@
         alt="An E.R.A.Univac 1103 computer in the 1950s"
       />
       <img
-        src="./assets/Computer-operators-with-an-Eniac-the-world’s-first-programmable-general-purpose-computer.png"
+        src="./assets/Computer-operators-with-an-Eniac.png"
         alt="Computer-operators-with-an-Eniac—the-world’s-first-programmable-general-purpose-computer"
       />
       <img src="./assets/susan-kare.png" alt="susan-kare" />
-    </div>
-    <div class="seccion-temarios" id="temarios">
+    </section>
+    <section class="seccion-temarios" id="temarios">
       <h1>
         Algunos de nuestros temas
       </h1>
@@ -143,25 +133,33 @@
         <img src="./assets/icon4.svg" alt="icon4" />
         <span>Seguridad inform&aacute;tica</span>
       </div>
-    </div>  
-    <div class="seccion-novedades">
+    </section>
+    <section class="seccion-novedades">
       <svg preserveAspectRatio="none" viewBox="0 0 100 100">
         <polygon points="100,100 100,0 0,100" fill="white"></polygon>
       </svg>
       <h1>¿Quer&eacute;s las &uacute;ltimas novedades?</h1>
       <span><a href="#">ESCUCHA LOS EPISODIOS</a></span>
-    </div>
+    </section>
     <footer>
       <div class="derechos-footer">
         <h2>© 2019— Hello blue pale dot</h2>
       </div>
-      <div class= "iconos-footer">
-        <i class="fab fa-spotify"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-telegram"></i>
-      </div>
-    </footer> 
+      <i class="iconos-footer">
+        <a href="https://www.spotify.com/co/" target="a_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://www.instagram.com/acamica/?hl=es-la" target="a_blank"
+          ><i class="fab fa-instagram"></i
+           ></a>
+        <a href="https://twitter.com/acamica_com?lang=es" target="a_blank"
+          ><i class="fab fa-twitter"></i
+            ></a>
+        <a href="https://www.facebook.com/Acamica.org/"
+        target="a_blank"><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://web.telegram.org/#/login"
+          target="a_blank"><i class="fab fa-telegram"></i
+        ></a>
+      </i>
+    </footer>
   </body>
 </html>

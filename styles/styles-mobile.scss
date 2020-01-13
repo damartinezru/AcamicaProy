@@ -1,19 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 @import "./styles-desktop.scss";
 @import "./styles-tablet.scss";
 @import "./variables.scss";
-     
-           
+  
+            
 * { 
   margin: 0;         
   padding: 0; 
 }
 body {
-  @extend %styles-tablet;
+  @extend %styles-tablet;   
   @extend %styles-desktop;
+  a {
+    text-decoration: none;
+  }
+  letter-spacing: $common-letter-spacing;
 }  
  
 .menu-inicial {
-  padding: $common-padding;
+  padding: $common-measure 0 $common-measure 0 ;
 
   #toggle {
     display: none;     
@@ -25,11 +32,13 @@ body {
     grid-template-rows: 20% 20%;
 
     .navbar-imagen {
+      margin-left: 10%;
       grid-area: 1 /1/ 1/ 1;
       justify-self: flex-start;  
     } 
 
     .navbar-label {
+      margin-right: 10%;
       grid-area: 1/ 2/ 1/ 2;
       justify-self: flex-end;
 
@@ -49,17 +58,17 @@ body {
       grid-area: 2/1/2/3;
       font-family: "IBM Plex Mono", monospace;
       nav ul {
-        padding: 0;
+        padding: 0;     
         margin: 0;
         background-color: $primary-background-color;
  
         li {
           list-style-type: none;
-          padding: 5% 2% 5% 5%; 
-  
+          padding:$common-measure 2%$common-measure$common-measure;  
+   
           a {
             text-decoration: none;
-            color: $primary-color-font;
+            color: $third-background-color;
           }
         }
       }
@@ -88,18 +97,22 @@ body {
 }
   
 .seccion-inicial {   
-  padding: 5% 5% 30% 5%;
+  padding:$common-measure $common-measure 30% $common-measure;
   display: grid; 
   margin: 0 0 10% 0;
   grid-template-columns: 100%;
   grid-template-rows: 40% 40% 20%;
-  grid-row-gap: 20%;
-  .titulo {  
-    grid-area: 1 / 1 / 1 / 1;
+  grid-row-gap: 10%; 
+  .titulo {       
     font-family: $primary-font;
-    font-size: 1.2em;
     color: $primary-color-font;
-    width: 90%;
+    width: 90%;  
+
+    h1 {
+      font-size: 36px;
+      line-height: 42px;
+      font-weight: 500; 
+    }
     .linea {
       text-decoration: line-through;
     }
@@ -107,8 +120,7 @@ body {
       color: $primary-background-color;
     }
   }
-  .descripcion-mobile {
-    grid-area: 2/ 1 / 2 /1;
+  .descripcion-mobile {     
     display: block;
     text-align: justify;
     font-size: 14px;
@@ -118,18 +130,23 @@ body {
   .descripcion-desktop {
     display: none;
   } 
- 
+  
   .boton-seccion-inicial {
     background-color: $secondary-background-color;
     justify-self: left;
     width: 100%; 
     display: flex;
-    justify-content: center; 
-      a {  
-        font-family: $third-font;
+    padding: 9% 0 9% 0;
+    justify-content: center;  
+      a {                  
+        font-family: $secondary-font;
         color: $primary-color-font;
         text-decoration: none;
         align-self: center;
+        font-weight: 600;
+        line-height: 24px;
+        font-size: 16px;
+
       }  
     &:hover {
       background-image: $secondary-gradient; 
@@ -140,95 +157,113 @@ body {
   }
 }
   
-.seccion-podcast {  
-  font-family: $primary-font;
-  color: $third-background-color;
-  padding: 0;      
-  margin: 0;             
+.seccion-podcast {      
+             
   background: $primary-gradient;
   transform: skewY(-6deg);
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 8% repeat(4, 30%);       
   .podcast {          
-    padding: $common-padding;  
+    padding: $common-measure;  
     margin: 10% 0 30% 0;
     transform: skewY(6deg); 
+    h1 {
+      font-size: 36px;
+      line-height: 42px;
+      font-family: $primary-font;
+      color: $third-background-color;
+      font-weight: 300;
+    }
     iframe {
-      padding-top: 5%;
+      padding-top:$common-measure;
       width:100%; 
       height:232px;    
       overflow: hidden;  
       border: none; 
     }     
   }  
-}           
-    
-.seccion-imagen-superpuesta {  
-  img {      
-    width: 100%;    
-    transform: translate(0, -15%);     
+}         
 
-  }    
-} 
-          
-.seccion-faq {         
+.seccion-about-us {   
+   transform: translate(0, -5%);       
   display: grid;
-  padding: 0 $common-padding 0 $common-padding;  
   grid-template-columns: 100%;
-  grid-template-rows: 30% 40% 40%; 
-  transform: translate(0, -15%);
-  h1 {
-    margin-right: 15%;
-    font-family: $primary-font;
-    line-height: 42px;
-    color: $primary-color-font;  
+  grid-template-rows: 65% 35%;
+  .imagen-about-us {
+    img {
+      width: 100%;               
+    }     
   } 
-  p {
-    font-family: $secondary-font;
-    font-size: 14px;
-    line-height: 22px;         
-    color: $primary-color-font;
-  }   
+  .descripcion-about-us{        
+    padding: 0 $common-measure 0 $common-measure;  
+    h1 {                
+      margin-right: 15%;
+      font-family: $primary-font;
+      line-height: 42px;
+      font-size: 36px;
+      font-weight: 400;  
+      color: $primary-color-font;   
+    } 
+    p {   
+      margin-top:3%;
+      font-family: $secondary-font;
+      font-size: 14px;
+      line-height: 22px;         
+      color: $primary-color-font; 
+    }   
+  }
 }   
-  
+        
 .seccion-invitados {   
+  margin-top:10%; 
   display: grid;    
   grid-template-columns: 100%;  
-  grid-template-rows: 10% repeat(5, 15%);
-  color: $primary-color-font;
-  letter-spacing: 0;
-  line-height: 42px;
-  font-family: $primary-font;
+  grid-template-rows: 7% repeat(5, 15%);                      
+
   h1 {   
-    padding: $common-padding;  
+    color: $primary-color-font;
+    line-height: 42px;
+    font-family: $primary-font;
+    font-size: 36px;
+    font-weight: 400;
+    padding: $common-measure;  
   }    
   img {  
     width: 100%;  
   }    
 }      
-.seccion-temarios {      
-  font-family: $primary-font; 
-  padding: 5%;   
-  .temario {       
-    color: $primary-color-font;
-    font-weight: bold; 
-    font-size: 1.2em;    
-    font-weight: 600;
+.seccion-temarios {       
+  padding:$common-measure; 
+  h1 {
+    font-family: $primary-font;  
+    font-family: $primary-font;
+    line-height: 42px;
+    font-size: 36px;
+    font-weight: 400;
+    color: $primary-color-font;   
+  }  
+  .temario {      
+
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 80% 20%;
     margin-top: 10%;
-    margin-bottom: 10%;           
+    margin-bottom: 10%; 
+
     img {
       grid-area: 1/1/1/1;
       justify-self: center;
       padding: 4%;  
     } 
     span {  
+      font-family: $primary-font;  
+      color: $primary-color-font;
+      font-weight: 600; 
+      font-size: 24px;    
       grid-area: 2/1/2/1;
       text-align: center;
-      align-self: flex-end;
+      align-self: flex-end; 
     }  
   }
 }
@@ -241,7 +276,7 @@ body {
   svg {
     height: 10vw;
     justify-self: flex-start;
-    top: 0;
+    top: 0;     
     left: 0;
     transform: rotate(180deg);
     z-index: 1;
@@ -249,42 +284,54 @@ body {
   h1 {
     font-family: $primary-font;
     text-align: center;
-    font-size: 2em;
+    font-size: 36px;
+    font-weight: 100;
     color: $third-background-color;
     justify-self: center;
-    padding: 5%; 
-  }
+    padding:$common-measure; 
+   }
   span {
-    text-align: center;
-    text-decoration: none;
-    color: $primary-color-font;
-    font-family: $third-font;
-    font-weight: 500;
+    text-align: center; 
     background-color: $secondary-background-color;
-    margin: 5%;
+    margin:$common-measure;
     padding: 4%;
     a {
-      text-decoration: none;
       color: $primary-color-font;
+      font-family: $secondary-font;
+      font-weight: 600;
     }
+      &:hover { 
+        background-image: $secondary-gradient;  
+        
+        a {
+          
+          color: $third-background-color; 
+          text-decoration: none;
+        }
+      }
+    
   }
 }
        
-footer {       
+footer {        
   padding-top: 10%;    
   text-align: center;
   color: $primary-color-font;
   font-weight: 100;
-   .derechos-footer {
+   .derechos-footer {                    
     h2 {
       font-family: $secondary-font;
       font-size: 14px; 
     } 
    } 
-   .iconos-footer {
-    i { 
-      padding: 5%;
-    }
+   .iconos-footer {  
+ 
+     a {
+       color:$primary-color-font; 
+      i { 
+        padding:$common-measure;
+      }
+     }
    }
 
 }

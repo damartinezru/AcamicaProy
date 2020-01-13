@@ -1,12 +1,11 @@
 
-
-$primary-font: 'IBM Plex Sans';
+$primary-font: 'IBM Plex Sans', sans-serif;
 $secondary-font: 'IBM Plex Mono', monospace;
-$third-font: 'IBM Plex Mono', monospace;
 $primary-color-font : #060A24 ;
 $primary-background-color: #0000EC;
 $secondary-background-color: #00f3bb;
 $third-background-color: #ffffff;
-$common-padding: 5% ;
+$common-measure: 5% ; 
+$common-letter-spacing: 0;
 $primary-gradient:  linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
 $secondary-gradient: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
